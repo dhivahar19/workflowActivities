@@ -4,7 +4,7 @@ import { WorkflowEditComponent } from './workflow-edit.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {combineReducers, StoreModule} from '@ngrx/store';
 import {RouterTestingModule} from '@angular/router/testing';
-import * as fromWorkflows from '@app-workflows-store';
+import * as fromWorkflows from '../store';
 import {ActivatedRoute} from '@angular/router';
 import {Actions} from '@ngrx/effects';
 import {WorkflowsEffects} from '../store/effects/workflows-effects';

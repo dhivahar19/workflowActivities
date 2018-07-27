@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { WorkflowNewComponent } from './workflow-new.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {combineReducers, StoreModule} from '@ngrx/store';
-import * as fromWorkflows from '@app-workflows-store';
+import * as fromWorkflows from '../store';
 import {RouterTestingModule} from '@angular/router/testing';
 import {Actions} from '@ngrx/effects';
 import {WorkflowsEffects} from '../store/effects/workflows-effects';
