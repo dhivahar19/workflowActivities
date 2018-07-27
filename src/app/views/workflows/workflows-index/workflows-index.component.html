@@ -1,0 +1,8 @@
+<h1> Activity List</h1>
+
+
+<app-workflow-list [workflows]="workflows$ | async"
+                  (show)="showWorkflow($event)"
+                  (remove)="deleteWorkflow($event)"
+                  (edit)="editWorkflow($event)"
+></app-workflow-list>

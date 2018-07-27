@@ -1,0 +1,39 @@
+<table *ngIf="workflows; else loading" class="table table-hover">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Actual Start Date</th>
+    <th>Actual End Date</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="workflow-row" *ngFor="let c of workflows; trackBy: workflowsTrackByFn">
+    <th scope="row">{{c.id}}</th>
+    <td>{{c.name}}</td>
+    <td>{{c.actual_start_date | amUtc | amDateFormat: 'DD-MM-YYYY' }}</td>
+    <td>{{c.actual_end_date | amUtc | amDateFormat: 'DD-MM-YYYY' }}</td>
+    <td>
+
+      <span class="float-right">
+
+        <button (click)="editWorkflow(c)" class="btn btn-outline-warning mb-1 btn-sm">
+          EDIT
+        </button>
+
+        <button (click)="deleteWorkflow(c)" class="btn btn-outline-danger mb-1 btn-sm">
+          DELETE
+        </button>
+
+      </span>
+
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+<ng-template #loading>
+  <span>loading workflows...</span>
+</ng-template>
